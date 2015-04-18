@@ -45,5 +45,5 @@ evaluateDFA (qset, sigma, d, ss, inFinal) (x:xs) =
 --  | null (x:xs) && inFinal ss accs = True
 --  | null (x:xs) && not (inFinal ss accs) = False
 --  | otherwise = 
-    let ns = d (ss, x)
-    in evaluateDFA (qset, sigma, d, ns, inFinal) xs
+    evaluateDFA (qset, sigma, d, ns, inFinal) xs
+    where ns = d (ss, x)
