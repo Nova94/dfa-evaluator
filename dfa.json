@@ -1,0 +1,7 @@
+{
+    "states" : ["q0","q1","q2","q3"]
+    , "sigma" : "01"
+    , "deltamap" : ["",""]
+    , "startstate" : ""
+    , "acceptstates":["",""]
+}
