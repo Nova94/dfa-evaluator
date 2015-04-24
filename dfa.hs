@@ -38,12 +38,10 @@ main = do
             where ns = d (ss, x)
     --empty Sigma = empty set language otherwise get string
     if (null s)
-        then print True
+        then print "Accepted"
         else do
             x <- getLine
-            print deltaMapping
-            print accs
-            print (evaluateDFA (q,s,delta,ss,inFinal) x)
+            print (if (evaluateDFA (q,s,delta,ss,inFinal) x) then "Accepted" else "Not Accepted")
 
 {- Original declarations to test evaluation
 --myDFA
